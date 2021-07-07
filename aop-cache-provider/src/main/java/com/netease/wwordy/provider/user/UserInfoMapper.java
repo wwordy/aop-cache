@@ -2,9 +2,8 @@ package com.netease.wwordy.provider.user;
 
 
 import com.netease.wwordy.api.user.UserInfo;
-import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
-@MyBatisMapper
 interface UserInfoMapper {
     //@Select("SELECT * FROM user_info where id = #{id}")
     UserInfo getUser(Long id);

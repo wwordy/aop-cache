@@ -9,7 +9,6 @@
 
     <!-- 应用名称 -->
     <dubbo:application name="aop-cache-provider" owner="wwordy" organization="aop-cache"/>
-
     <dubbo:registry address="zookeeper://8.140.17.15:2181" />
     <!-- 服务提供者协议配置 -->
     <dubbo:protocol name="dubbo" port="20880"/>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!-- 配置:http://mybatis.github.io/mybatis-3/configuration.html -->
     <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING" /><!-- 打印查询语句 -->
         <setting name="cacheEnabled" value="true"/> <!-- 全局的映射器启用缓存 -->
         <setting name="lazyLoadingEnabled" value="true"/> <!-- 全局启用延迟加载 -->
         <setting name="multipleResultSetsEnabled" value="true"/>  <!-- 允许多种结果集从一个单独的语句中返回 -->
@@ -10,15 +13,12 @@
         <setting name="defaultExecutorType" value="SIMPLE"/> <!-- 配置默认的执行器。SIMPLE执行器没有什么特别之处。REUSE执行器重用预处理语句 -->
         <setting name="defaultStatementTimeout" value="120"/> <!-- 设置超时时间，它决定驱动等待数据库响应的秒数 -->
     </settings>
-
     <typeAliases>
         <!--
         通过package，可以直接指定package的名字，mybatis会自动扫描你指定包下面的javabean，并且默认设置一个别名，
         默认的名字为：javabean首字母小写的非限定类名(不带包名)来作为它的别名。
         也可在javabean加上注解@Alias来自定义别名，例如：@Alias(user)
         -->
-       <typeAlias alias="UserInfo" type="com.netease.wwordy.api.user.UserInfo"/>
+       <package  name="com.netease.wwordy.api.user"/>
     </typeAliases>
-
-
 </configuration>

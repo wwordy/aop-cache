@@ -1,11 +1,14 @@
 package com.netease.wwordy.provider;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author liuwangwang@corp.netease.com
  * @date 2021/7/3
  */
+
 @Slf4j
 public class ProviderMain {
     public static void main(String[] args) {

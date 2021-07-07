@@ -3,6 +3,7 @@ package com.netease.wwordy.provider.user;
 import com.netease.wwordy.api.user.UserInfo;
 import com.netease.wwordy.api.user.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -14,9 +15,12 @@ import javax.annotation.Resource;
 @Slf4j
 @Component(value = "userInfoServiceImpl")
 public class UserServiceImpl implements UserService {
+
     @Resource
     private UserInfoMapper userInfoMapper;
-
+   static {
+       System.out.println("---------------------------------------");
+   }
     @Override
     public UserInfo getUser(Long id) {
         log.info("请求的用户id={}", id);
