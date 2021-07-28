@@ -19,11 +19,4 @@ import javax.annotation.Resource;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class UserInfoTest {
 
-    @Resource
-    private BaseCheck<UserInfo> baseCheck;
-    @Test
-    public void test(){
-        UserInfo check = baseCheck.check();
-        System.out.println(check);
-    }
 }

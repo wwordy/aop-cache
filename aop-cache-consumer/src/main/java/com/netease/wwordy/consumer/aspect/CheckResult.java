@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
+import java.io.Serializable;
 
 /**
  * @author liuwangwang@corp.netease.com
@@ -15,7 +18,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CheckResult<T> {
-
-    private T data;
+@SuperBuilder
+public abstract class CheckResult implements Serializable {
+    private static final long serialVersionUID = 1359699992761880303L;
+    private String requestId;
 }
